@@ -10,7 +10,7 @@ const fetcher = (variables, token) => {
       
        { 
        user(login: "<hrshita-kshyp>") {
-       repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
+       repositories(ownerAffiliations: OWNER, isFork: True, first: 100) {
        nodes {
         name
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
@@ -34,7 +34,7 @@ const fetcher = (variables, token) => {
     },
   );
 };
-
+;
 async function fetchTopLanguages(username, exclude_repo = []) {
   if (!username) throw Error("Invalid username");
 
